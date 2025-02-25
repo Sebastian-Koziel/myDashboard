@@ -31,7 +31,7 @@ const SalesChannelChart = () => {
 						<Legend />
 						<Bar dataKey={"value"} fill='#8884d8'>
 							{salesChannelData.map((entry, index) => (
-								<Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+								<Cell key={`cell-${entry}`} fill={COLORS[index % COLORS.length]} />
 							))}
 						</Bar>
 					</BarChart>

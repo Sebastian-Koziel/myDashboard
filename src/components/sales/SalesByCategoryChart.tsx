@@ -1,12 +1,7 @@
 import { motion } from "framer-motion";
 import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from "recharts";
-const salesByCategory = [
-	{ name: "Electronics", value: 400 },
-	{ name: "Clothing", value: 300 },
-	{ name: "Home & Garden", value: 200 },
-	{ name: "Books", value: 100 },
-	{ name: "Others", value: 150 },
-];
+import { salesByCategory } from "../../constans";
+
 
 const COLORS = ["#8884d8", "#82ca9d", "#ffc658", "#ff8042", "#0088FE"];
 
@@ -33,7 +28,7 @@ const SalesByCategoryChart = () => {
 							label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
 						>
 							{salesByCategory.map((entry, index) => (
-								<Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+								<Cell key={`cell-${entry}`} fill={COLORS[index % COLORS.length]} />
 							))}
 						</Pie>
 						<Tooltip

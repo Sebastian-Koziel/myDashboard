@@ -31,7 +31,7 @@ const OrderDistribution = () => {
 							label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
 						>
 							{orderStatusData.map((entry, index) => (
-								<Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+								<Cell key={`cell-${entry}`} fill={COLORS[index % COLORS.length]} />
 							))}
 						</Pie>
 						<Tooltip
