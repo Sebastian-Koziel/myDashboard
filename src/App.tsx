@@ -20,6 +20,7 @@ function App() {
           <div className="absolute inset-0 backdrop-blur-sm"/>
         </div>
         <Sidebar />
+        <div className="flex-1 overflow-y-auto p-4"> {/* Content area, flex-1 to take remaining space */}
         <Routes>
           <Route path="/" element={<OverviewPage />} />
           <Route path="/products" element={<ProductsPage />} />
@@ -28,6 +29,7 @@ function App() {
           <Route path="/orders" element={<OrdersPage />} />
           <Route path="/analytics" element={<AnalyticsPage />} />
         </Routes>
+        </div>
     </div>
     </>
   )

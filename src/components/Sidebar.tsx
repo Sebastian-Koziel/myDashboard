@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 
 
 const Sidebar = () => {
-    const [isSidebarOpen, setisSidebarOpen] = useState(true);
+    const [isSidebarOpen, setisSidebarOpen] = useState(false);
   return (
-    <motion.div className={`relative z-10 transition-all duration-300 ease-in-out flex-shrink-0 ${isSidebarOpen ? `w-64` : `w-20`}`}
+    <motion.div className={`relative z-10 transition-all duration-300 ease-in-out lg:block hidden flex-shrink-0 ${isSidebarOpen ? `w-64` : `w-20`}`}
     animate={{width: isSidebarOpen ? 256 : 80}}
     >
         <div className="h-full bg-gray-800 bg-opacity-50 backdrop-blur-md p-4 flex flex-col border-r border-gray-700">
